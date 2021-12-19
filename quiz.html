@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta author="Andreas Evripidou">
+    <meta description="Andreas Evripidou first website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Andreas Evripidou</title>
+    
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <a href="index.html"><img id="logo" src="img/logo.png" alt="My logo"></a>
+            <ul>
+                <li><a class="menu" href="studies.html">Studies</a></li>
+                <li><a class="menu" href="quiz.html">Quiz</a></li>
+                <li><a class="menu" href="canvas.html">Canvas</a></li>
+                <li><a class="menu" href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>  
+    <main>
+        <form id = "quiz" name = "quiz">
+            <h1>Welcome to my QUIZ!!11!!</h1>
+            <h2>Complete the quiz and find out if you are suitable for studying Computer Science</h2>
+            <div>
+                <section id="q1">
+                    <img src="./IMG/ram.jpg" alt="A RAM stick">
+                    <h3 class = "questions">What type of memory is that?</h3>
+                    <input type = "radio" name = "question1" value = "ROM"> ROM<br>
+                    <input type = "radio" name = "question1" value = "SSD"> SSD<br>
+                    <input type = "radio" name = "question1" value = "RAM"> RAM<br>
+                </section>  
+                
+                <section id="q2">
+                    <img src="./IMG/hdd.jpg" alt="A RAM stick">
+                    <h3 class = "questions">what part of a pc is that?</h3>
+                    <input type = "radio" name = "question2" value = "CPU"> CPU<br>
+                    <input type = "radio" name = "question2" value = "GPU"> GPU<br>
+                    <input type = "radio" name = "question2" value = "HDD"> HDD<br>
+                </section>
+                
+                <section id="q3">
+                    <img src="./IMG/mouse.jpg" alt="A computer mouse">
+                    <h3 class = "questions">What is the name of this peripheral?</h3>
+                    <input type = "radio" name = "question3" value = "Keyboard"> Keyboard<br>
+                    <input type = "radio" name = "question3" value = "Mouse"> Mouse<br>
+                    <input type = "radio" name = "question3" value = "Headset"> Headset<br>
+                </section>
+            </div>
+            <input id = "button" type = "button" value = "I'm finished!" onclick = "check();">
+            
+            <div id = "afterSubmit">
+                <h1 id = "message"></h1>
+            </div>
+        
+        </form>
+    </main>
+    <script src="./JS/quiz.js"></script>
+    <footer>
+        <p>
+            <a class="accessibilityLink" href="accessibility.html">Accesability</a>
+        </p>
+        <p>&copy;Andreas Evripidou 2020</p>
+    </footer>
+</body>
+</html>

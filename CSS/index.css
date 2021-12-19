@@ -1,64 +1,41 @@
+/*----------General-----------*/
 *{
-    margin: 0 0 0 0;
-    /*Hide scroll-bar*/
-    -ms-overflow-style: none; /* IE and Edge */ 
-    scrollbar-width: none;  /*firefox */
-}
-
-::-webkit-scrollbar {
-    display: none;/*Hide scroll for chrome*/
-  }
-
-header{
-    margin: 0 0 0 0;
+    margin: 0;
     padding: 0;
-    background-image: url("../IMG/Akamas.JPG");
-    /* Full height */
-    height: 100vh; 
-    width: 100vw;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+}
+body{
+    background-color: #303030;
+}
+main{
+    background-color: #F8F8FF;
+    min-height: 90vh;
 }
 
+/*--------Navigation area--------*/
 nav{
-    background-color: gray;
-    position: sticky;
-    top: 0;
+    background-color:  	#606060;
+    height: 7vh;
+    width: 100%;
+    position: fixed;
 }
 
-#logo{
-    width: 5%;
-    padding: 2%;
+nav #logo{
+    width: 7vw;
+    padding: 2% 2%;
     float: left;
 }
 
-.line{
-    width: 9vw;
-    height: 0.5vh;
-    background-color: black;
-    margin: 1vh 0;
-}
-
-#container{
-    float: right;
-    margin: 1vh;
-}
-
-ul{
-    display: none;
+nav ul{
     text-align: right;
-    padding: 1.25% 1%;
+    padding: 2% 1%;
 }
 
-li{
+nav li{
     padding: 0.5%;
     display: inline;
-    font-size: 2.5vw;
+    font-size: 5vw;
     text-align: right;
-    color: black;
+    color: white;
 }
 
 .menu:link, .menu:visited {
@@ -79,67 +56,367 @@ li{
 .menu:active {
     color: black;
     text-decoration: none;
-  }
+}
+/*-------------Home page-----------*/
 
-h1{
-    padding: 60vh 0 0 0;
+#homeBackground{
+    display: block;
+    background-image: url("../IMG/Akamas.JPG");
+    /* Full height */
+    height: 70%; 
+    width: 100vw;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#intro{
+    padding-top: 1vh;
+    color: white;
+}
+#intro p,#studies h1{
+    padding-top: 2%;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+#homeBackground img{
+    width: 30%;
+    height: 30%;
+    margin-left: 34%;
+    border-radius: 50%;
+    border: 6px solid gray;
+}
+#homeBackground section{
+    padding: 30vh  5vw 5vw 5vw;
+}
+
+/*-----------Studies page----------*/
+#studies{
+    padding: 10vh 5vw;
+    background-color: #ADD8E6;
+}
+#studies section{
+    border: solid black;
+    border-radius: 3%;
     text-align: center;
-    color: aliceblue;
+    margin-top: 2%;
+    padding: 2%;
+    background-color: #E0E0E0;   
+}
+#studies #general{
+    border: none;
+    background-color: inherit;
+}
+#studies p{
+    padding: 1%;
+}
+#studies section img{
+    width: 80%;
+    border-radius: 10%;   
+}
+#general #generalimg{
+    width: 48vw;
+    height: 27vw;
+}
+/*------------Quiz page------------*/
+#quiz {
+    padding-top: 12vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+}
+#quiz h1{
+    color: red;
 }
 
-main{
-    padding: 5% 5%;
-    background-color: rgb(216, 216, 216);
+#quiz img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+#quiz section{
+    padding: 5% 0;
+    margin-top: 5vh;
+    border: 1vh solid gray;
+    background-color: #ADD8E6;
+    
+}
+#quiz #button{
+    margin-top: 5vh;
+}
+#afterSubmit{
+    padding: 5vh 0;
+}
+#afterSubmit img{
+    border-radius: 5%;
 }
 
-p{
-    width: 60vw;
-    text-align: left;
+/*-----------Canvas page-----------*/
+#canvas{
+    padding-top: 10vh;
+    display: block;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
 }
+
+
+#statistics{
+    border: 1px solid black;
+}
+
+
+/*-----------Contact page----------*/
+#contact{
+    padding: 10vh 5vw 0 5vw;
+    min-height: 80vh;
+}
+#contact a{
+    color: red;
+}
+#contact form{
+    float: left;
+    padding: 5vh 5vw;
+    margin-bottom: 3vh;
+    background-color: #ADD8E6;
+    border-radius: 2%;
+}
+#contact aside{
+    padding-bottom: 1vh;
+}
+#commentbox{
+    height: 20vh;
+}
+#sendbutton{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    padding: 0.5vh;
+    border-radius: 5%;
+    border:none;
+    color: mediumorchid;
+    background-color: darkgrey;
+}
+#emailbox{
+    margin-bottom: 5vh;
+}
+#emailbox ::placeholder{
+    text-align: start;
+}
+#contact h1{
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+/*--------Accessibility page-------*/
+#accessibility{
+    padding: 10vh 5vw 0 5vw;
+    min-height: 50vh;
+}
+
+
+/*-------------Footer-------------*/
+.accessibilityLink:link, .accessibilityLink:visited{
+    color: #DCDCDC;
+}
+.accessibilityLink:hover{
+    color: red;
+}
+footer{
+    min-height: 7vh;
+    text-align: center;
+    color: white;
+    background-color: #303030;
+    clear: both;
+}
+
 
 /*Tablet screens*/
 @media only screen and (min-width: 600px) and (max-width: 1199px){
-    
-    #logo{
-       width: 5%; 
-       padding: 1.5%;
-    }
+/*--------Navigation area--------*/
 
-    li{
-        font-size: 4vw;
-    }
+nav{
+    height: 10vh;
+}
 
-    #container{
-        display: none;
-    } 
-    
-    ul{
-        display: block;
-    }
+nav #logo{
+    height: 7vh;
+    width: 7vh;
+    padding: 1%;
+}
+nav ul{
+    padding: 1%;
+}
+
+nav li{
+   font-size: 5vh;
+}
+
+/*-------Home Page --------*/
+#homeBackground section{
+    padding: 30vh  15vw 0 15vw;
+}
+
+#homeBackground img{
+    width: 15%;
+    height: 15%;
+    float: left;
+    margin: 20px;
+}
+/*-----------Studies page----------*/
+#studies{
+    padding: 10vh;
+}
+#studies section img{
+    width: 50%;  
+}
+/*-----------Contact page----------*/
+#contact aside{
+    float: right;
+}
 }
 
 /*laptop screens*/
 @media screen and (min-width: 1200px){
-    nav{
-        height: 8vh;
-    }
-    #logo{
-        width: 4%; 
-        padding: 0% 5%;
-     }
+p,h1,h2,h3,section{
+    padding-left: 5%;
+    padding-right: 5%;
+}
 
-    #container{
-         display: none;
-     } 
-    
-    ul{
-         display: block;
-         padding-right: 5%;
-     }
-    
-     li{
-        padding: 0.1%;
-        font-size: 1.5vw;
-    }
+/*--------Navigation area--------*/
+nav{   
+    height: 11vh;
+}
+nav #logo{
+    height: 7vh;
+    width: 7vh;
+    padding: 1%;
+}
+nav ul{
+    padding: 1%;
+}
 
+nav li{
+   font-size: 5vh;
+}
+
+/*-------Home Page --------*/
+#homeBackground section{
+    padding: 55vh 10vw 0 10vw;
+    font-size: 1.6rem;
+    
+}
+#homeBackground img{
+    width: 10%;
+    height: 10%;
+    float: left;
+    margin: 20px;
+}
+
+#intro p,#studies h1{
+    padding-top: 1%;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: justify;
+}
+
+/*-----------Studies page----------*/
+#studies{
+    padding: 10vh;
+    font-size: 1.7rem;
+    height: 400vh;
+}
+
+#studies section img{
+    width: 50%;
+}
+
+#com1001{
+    height: 100vh;
+    width: 43%;
+    float: left;
+}
+#com1002{
+    height: 100vh;
+    width: 43%;
+    float: right;
+}
+#com1003{
+    height:100vh;
+    width: 43%;
+    float: left;
+}
+#com1005{
+    height: 100vh;
+    width: 43%;
+    float: right;
+}
+#com1006{
+    height: 100vh;
+    width: 43%;
+    float: left;
+}
+#com1008{
+    height: 100vh;
+    width: 43%;
+    float: right;
+}
+/*-----------Quiz page----------*/
+#quiz{
+    padding-top: 15vh;
+    font-size: 1.7rem;
+}
+
+
+#quiz img{
+    width: 30%;
+}
+#quiz section{
+    width: 30%;
+    height: 30vh;   
+}
+#q1{
+    display: inline-block;
+}
+#q2{
+    display: inline-block;
+}
+#q3{
+    display: inline-block;
+}
+
+/*-----------Canvas page-----------*/
+
+#canvas{
+    padding-top: 15vh;
+    font-size: 1.7rem;
+}
+
+
+#myform{
+    width: 40%;
+    float: left;
+}
+#canvas aside{
+    width: 40%;
+    float: right;
+    
+}
+/*-----------Contact page----------*/
+#contact{
+    padding: 15vh 15vw 0 15vw;
+}
+#contact aside{
+    float: right;
+}
+/*--------Accessibility page-------*/
+#accessibility{
+    padding: 15vh 15vw 0 15vw;
+}
 }

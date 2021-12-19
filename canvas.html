@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta author="Andreas Evripidou">
+    <meta description="Andreas Evripidou first website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/index.css">
+    <title>Andreas Evripidou</title>
+    
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <a href="index.html"><img id="logo" src="img/logo.png" alt="My logo"></a>
+            <ul>
+                <li><a class="menu" href="studies.html">Studies</a></li>
+                <li><a class="menu" href="quiz.html">Quiz</a></li>
+                <li><a class="menu" href="canvas.html">Canvas</a></li>
+                <li><a class="menu" href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="canvas">
+        <section id="myform">
+            <h1>Here are some statistics about the <br> hours I study in my first 3 modules <br>showcased in a form and a canvas.</h1>
+            <table id="statistics">
+                <tr id="days">
+                  <th id="empty"></th>
+                  <th class="day">Mon</th>
+                  <th class="day">Tue</th>
+                  <th class="day">Wed</th>
+                  <th class="day">Thu</th>
+                  <th class="day">Fri</th>
+                  <th class="day">Sat</th>
+                  <th class="day">Sun</th>
+                </tr>
+                <tr id="com1">
+                  <th>COM1001</th>
+                  <td class="hour1">1</td>
+                  <td class="hour1">0</td>
+                  <td class="hour1">2</td>
+                  <td class="hour1">1</td>
+                  <td class="hour1">1</td>
+                  <td class="hour1">0</td>
+                  <td class="hour1">0</td>
+                </tr>
+                <tr id="com2">
+                  <th>COM1002</th>
+                  <td class="hour2">0</td>
+                  <td class="hour2">2</td>
+                  <td class="hour2">1</td>
+                  <td class="hour2">3</td>
+                  <td class="hour2">1</td>
+                  <td class="hour2">0</td>
+                  <td class="hour2">0</td>
+                </tr>
+                <tr id="com3">
+                    <th>COM1003</th>
+                    <td class="hour3">0</td>
+                    <td class="hour3">0</td>
+                    <td class="hour3">0</td>
+                    <td class="hour3">2</td>
+                    <td class="hour3">2</td>
+                    <td class="hour3">0</td>
+                    <td class="hour3">0</td>
+                </tr>
+            </table>
+        </section>
+        <aside id="extra">
+            <section id="visualType">
+                <button id="barchart" onclick="return BarChart(defualt);" >Bar Chart</button>
+                <button id="piechart" onclick="return PieChart(defualt);">Pie Chart</button>
+                <button id="linegraph" onclick="return LineGraph(defualt);" >Line Graph</button>
+            </section>
+            <canvas id="myCanvas" width="350" height="200">
+            </canvas>
+            <p>I couldn't get canvas to work :/</p>
+            <section id="colorType">
+                <button id="color1" onclick="return ColorScheme1();">Colours type 1</button>
+                <button id="color2" onclick="return ColorScheme2();" >Colours type 2</button>
+                <button id="color3" onclick="return ColorScheme3();" >Colours type 3</button>
+            </section>
+        </aside> 
+    </main>
+    
+    <script src="JS/canvas.js"></script>
+    <footer>
+        <p>
+            <a class="accessibilityLink" href="accessibility.html">Accesability</a>
+        </p>
+        <p>&copy;Andreas Evripidou 2020</p>
+    </footer>
+</body>
+</html>
