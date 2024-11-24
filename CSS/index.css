@@ -1,422 +1,204 @@
-/*----------General-----------*/
-*{
+:root {
+    --footer-background-color: #303030;
+    --text-color: #FFF;
+    --grey: #606060;
+    --home-background-image: url("../IMG/Akamas.JPG");
+    --accessibility-link-color: #DCDCDC;
+    --accessibility-link-hover-color: #FFF;
+}
+
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: #303030;
-}
-main{
-    background-color: #F8F8FF;
-    min-height: 90vh;
+
+header {
+    background-color: var(--footer-background-color);
+    color: var(--text-color);
 }
 
-/*--------Navigation area--------*/
-nav{
-    background-color:  	#606060;
-    height: 7vh;
-    width: 100%;
+nav {
+    display: flex;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--footer-background-color);
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-nav #logo{
-    width: 7vw;
-    padding: 2% 2%;
-    float: left;
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
 }
 
-nav ul{
-    text-align: right;
-    padding: 2% 1%;
+nav ul li {
+    margin-right: 20px;
 }
 
-nav li{
-    padding: 0.5%;
-    display: inline;
-    font-size: 5vw;
-    text-align: right;
-    color: white;
-}
-
-.menu:link, .menu:visited {
-    color: black;
-    border: 2px solid black;
-    padding: 0.2%;
-    text-align: center;
+nav ul li a {
     text-decoration: none;
-    display: inline-block;
-  }
-  
-.menu:hover {
-    color: white;
-    background-color: black;
-    text-decoration: none;
-  }
-  
-.menu:active {
-    color: black;
-    text-decoration: none;
-}
-/*-------------Home page-----------*/
-
-#homeBackground{
-    display: block;
-    background-image: url("../IMG/Akamas.JPG");
-    /* Full height */
-    height: 70%; 
-    width: 100vw;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#intro{
-    padding-top: 1vh;
-    color: white;
-}
-#intro p,#studies h1{
-    padding-top: 2%;
-    font-size: 1.5rem;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: justify;
-}
-#homeBackground img{
-    width: 30%;
-    height: 30%;
-    margin-left: 34%;
-    border-radius: 50%;
-    border: 6px solid gray;
-}
-#homeBackground section{
-    padding: 30vh  5vw 5vw 5vw;
+    color: var(--text-color);
+    font-weight: bold;
 }
 
-/*-----------Studies page----------*/
-#studies{
-    padding: 10vh 5vw;
-    background-color: #ADD8E6;
+#logo {
+    height: 50px;
 }
-#studies section{
-    border: solid black;
-    border-radius: 3%;
-    text-align: center;
-    margin-top: 2%;
-    padding: 2%;
-    background-color: #E0E0E0;   
-}
-#studies #general{
-    border: none;
-    background-color: inherit;
-}
-#studies p{
-    padding: 1%;
-}
-#studies section img{
-    width: 80%;
-    border-radius: 10%;   
-}
-#general #generalimg{
-    width: 48vw;
-    height: 27vw;
-}
-/*------------Quiz page------------*/
-#quiz {
-    padding-top: 12vh;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+
+section {
+    height: 100vh;
+    padding: 5vw;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
     text-align: center;
 }
-#quiz h1{
-    color: red;
+
+section:nth-child(even) {
+    background-color: #DCDCDC;
+    color: var(--footer-background-color);
 }
 
-#quiz img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 60%;
-}
-#quiz section{
-    padding: 5% 0;
-    margin-top: 5vh;
-    border: 1vh solid gray;
-    background-color: #ADD8E6;
+section:nth-child(odd) {
     
-}
-#quiz #button{
-    margin-top: 5vh;
-}
-#afterSubmit{
-    padding: 5vh 0;
-}
-#afterSubmit img{
-    border-radius: 5%;
+    background-color: var(--white);
+    color: var(--footer-background-color);
 }
 
-/*-----------Canvas page-----------*/
-#canvas{
-    padding-top: 10vh;
-    display: block;
-    padding-left: 5%;
-    padding-right: 5%;
-    width: 90%;
+#home {
+    background: var(--home-background-image) no-repeat center center/cover;
+    display: flex;
+    color: var(--text-color);
 }
 
-
-#statistics{
-    border: 1px solid black;
+/* Overlay Layer */
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1;
 }
 
+#home ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-/*-----------Contact page----------*/
+/* Content Inside Home Section */
+#home-content {
+    position: relative;
+    z-index: 2; /* Ensure content appears above the overlay */
+}
+
+#home-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#home-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#home-content a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 10px 20px;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#home-content a:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer {
+    background-color: var(--footer-background-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+.accessibilityLink {
+    color:  var(--accessibility-link-color);
+    text-decoration: none;
+}
+
+.accessibilityLink:hover {
+    color: var(--accessibility-link-hover-color);
+}
+
+a {
+    text-decoration: none;
+}
+
 #contact{
-    padding: 10vh 5vw 0 5vw;
-    min-height: 80vh;
-}
-#contact a{
-    color: red;
-}
-#contact form{
-    float: left;
-    padding: 5vh 5vw;
-    margin-bottom: 3vh;
-    background-color: #ADD8E6;
-    border-radius: 2%;
-}
-#contact aside{
-    padding-bottom: 1vh;
-}
-#commentbox{
-    height: 20vh;
-}
-#sendbutton{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    padding: 0.5vh;
-    border-radius: 5%;
-    border:none;
-    color: mediumorchid;
-    background-color: darkgrey;
-}
-#emailbox{
-    margin-bottom: 5vh;
-}
-#emailbox ::placeholder{
-    text-align: start;
+    padding: 0% 3% 0% 3%;
 }
 #contact h1{
-    font-style: italic;
-    text-align: center;
-    margin-bottom: 5vh;
+    font-size: 3em;
 }
-
-/*--------Accessibility page-------*/
-#accessibility{
-    padding: 10vh 5vw 0 5vw;
-    min-height: 50vh;
+#contact-social{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-
-
-/*-------------Footer-------------*/
-.accessibilityLink:link, .accessibilityLink:visited{
-    color: #DCDCDC;
+#contact #emailText{
+    border-bottom: 3px solid transparent;
+    width: fit-content;
 }
-.accessibilityLink:hover{
-    color: red;
+#emailText a{
+    text-decoration: none;
+    color: unset;
 }
-footer{
-    min-height: 7vh;
-    text-align: center;
-    color: white;
-    background-color: #303030;
-    clear: both;
+#contact #emailText:hover{
+    border-bottom: 3px solid #EEC615;
+    transition: 0.2s;
 }
-
-
-/*Tablet screens*/
-@media only screen and (min-width: 600px) and (max-width: 1199px){
-/*--------Navigation area--------*/
-
-nav{
-    height: 10vh;
+#contact #emailText:hover span{
+    color: #EEC615;
+    transition: 0.2s;
 }
-
-nav #logo{
-    height: 7vh;
-    width: 7vh;
-    padding: 1%;
+#instaForth, #githubForth, #linkedInForth {
+    margin: 2%;
+    opacity: 100%;
+    width: 40px;
 }
-nav ul{
-    padding: 1%;
-}
-
-nav li{
-   font-size: 5vh;
-}
-
-/*-------Home Page --------*/
-#homeBackground section{
-    padding: 30vh  15vw 0 15vw;
-}
-
-#homeBackground img{
-    width: 15%;
-    height: 15%;
-    float: left;
-    margin: 20px;
-}
-/*-----------Studies page----------*/
-#studies{
-    padding: 10vh;
-}
-#studies section img{
-    width: 50%;  
-}
-/*-----------Contact page----------*/
-#contact aside{
-    float: right;
-}
-}
-
-/*laptop screens*/
-@media screen and (min-width: 1200px){
-p,h1,h2,h3,section{
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-/*--------Navigation area--------*/
-nav{   
-    height: 11vh;
-}
-nav #logo{
-    height: 7vh;
-    width: 7vh;
-    padding: 1%;
-}
-nav ul{
-    padding: 1%;
-}
-
-nav li{
-   font-size: 5vh;
-}
-
-/*-------Home Page --------*/
-#homeBackground section{
-    padding: 55vh 10vw 0 10vw;
-    font-size: 1.6rem;
-    
-}
-#homeBackground img{
-    width: 10%;
-    height: 10%;
-    float: left;
-    margin: 20px;
-}
-
-#intro p,#studies h1{
-    padding-top: 1%;
-    font-size: 1.5rem;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: justify;
-}
-
-/*-----------Studies page----------*/
-#studies{
-    padding: 10vh;
-    font-size: 1.7rem;
-    height: 400vh;
-}
-
-#studies section img{
-    width: 50%;
-}
-
-#com1001{
-    height: 100vh;
-    width: 43%;
-    float: left;
-}
-#com1002{
-    height: 100vh;
-    width: 43%;
-    float: right;
-}
-#com1003{
-    height:100vh;
-    width: 43%;
-    float: left;
-}
-#com1005{
-    height: 100vh;
-    width: 43%;
-    float: right;
-}
-#com1006{
-    height: 100vh;
-    width: 43%;
-    float: left;
-}
-#com1008{
-    height: 100vh;
-    width: 43%;
-    float: right;
-}
-/*-----------Quiz page----------*/
-#quiz{
-    padding-top: 15vh;
-    font-size: 1.7rem;
-}
-
-
-#quiz img{
-    width: 30%;
-}
-#quiz section{
-    width: 30%;
-    height: 30vh;   
-}
-#q1{
-    display: inline-block;
-}
-#q2{
-    display: inline-block;
-}
-#q3{
-    display: inline-block;
-}
-
-/*-----------Canvas page-----------*/
-
-#canvas{
-    padding-top: 15vh;
-    font-size: 1.7rem;
-}
-
-
-#myform{
-    width: 40%;
-    float: left;
-}
-#canvas aside{
-    width: 40%;
-    float: right;
-    
-}
-/*-----------Contact page----------*/
-#contact{
-    padding: 15vh 15vw 0 15vw;
-}
-#contact aside{
-    float: right;
-}
-/*--------Accessibility page-------*/
-#accessibility{
-    padding: 15vh 15vw 0 15vw;
-}
+#facebookForth{
+    width: 40px;
+    opacity: 100%;
+    margin: 2% 2% 2% 0%;
 }
