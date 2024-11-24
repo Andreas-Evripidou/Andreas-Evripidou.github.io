@@ -143,15 +143,6 @@ section:nth-child(odd) {
     justify-content: center;
 }
 
-footer {
-    background-color: var(--footer-background-color);
-    color: var(--text-color);
-    text-align: center;
-    padding: 10px 0;
-    width: 100%;
-    bottom: 0;
-}
-
 .accessibilityLink {
     color:  var(--accessibility-link-color);
     text-decoration: none;
@@ -201,4 +192,15 @@ a {
     width: 40px;
     opacity: 100%;
     margin: 2% 2% 2% 0%;
+}
+
+footer {
+    background-color: var(--footer-background-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    z-index: 2;
 }
