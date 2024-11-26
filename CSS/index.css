@@ -9,7 +9,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -19,17 +19,24 @@ header {
 }
 
 nav {
-    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 10px 20px;
-    justify-content: space-between;
     align-items: center;
     background-color: var(--footer-background-color);
     z-index: 10;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
 nav ul {
@@ -56,7 +63,6 @@ nav ul li a {
 
 section {
     height: 100vh;
-    padding: 5vw;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -70,7 +76,6 @@ section:nth-child(even) {
 }
 
 section:nth-child(odd) {
-    
     background-color: var(--white);
     color: var(--footer-background-color);
 }
@@ -136,6 +141,8 @@ section:nth-child(odd) {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0 auto;
+    max-width: 1024px;
 }
 #contact {
     display: flex;
